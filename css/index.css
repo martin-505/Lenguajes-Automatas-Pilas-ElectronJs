@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+#showcase {
+    background-image: url('https://cdn.pixabay.com/photo/2020/11/07/01/28/abstract-5719221_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#showcase h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+#showcase .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+    border: #000000 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#showcase .button:hover {
+    background: #000000;
+    color: #fff;
+}
+
+.auto1 {
+    background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.automatas-box {
+    width: 320px;
+    height: 420px;
+    background: rgba(117, 199, 236, 0.932);
+    color: rgb(0, 0, 0);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 20px;
+}
+
+.automatas-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.automatas-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.automatas-box input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.automatas-box input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.automatas-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.automatas-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: rgb(54, 52, 52);
+}
+
+.automatas-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.automatas-box a:hover {
+    color: #fff;
+}

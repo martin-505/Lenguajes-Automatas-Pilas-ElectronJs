@@ -1,10 +1,10 @@
 {
-    "name": "proyectoadp",
+    "name": "practica",
     "version": "1.0.0",
-    "description": "Practica Pilas",
-    "main": "main.js",
+    "description": "esta es la chida",
+    "main": "./main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+
         "start": "electron .",
         "pack": "electron-builder --dir",
         "dist": "electron-builder"
@@ -16,7 +16,7 @@
         "electron-builder": "^22.9.1"
     },
     "build": {
-        "appId": "com.practica.afpila",
+        "appId": "com.practicaPila.afp",
         "win": {
             "target": "nsis",
             "icon": "build/icon.ico"

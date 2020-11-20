@@ -17,18 +17,18 @@ const automata = {
             estado: 0,
             simbolo: 'a',
             simboloPila: 'A',
-            insertarPila: ['A', 'A'],
+            insertarPila: ['B'],
             al_estado: 0
         },
         {
             estado: 0,
-            simbolo: 'b',
-            simboloPila: 'A',
-            insertarPila: ['B'],
-            al_estado: 1
+            simbolo: 'a',
+            simboloPila: 'B',
+            insertarPila: ['B', 'A'],
+            al_estado: 0
         },
         {
-            estado: 1,
+            estado: 0,
             simbolo: 'b',
             simboloPila: 'B',
             insertarPila: [''],
@@ -37,8 +37,8 @@ const automata = {
         {
             estado: 1,
             simbolo: 'b',
-            simboloPila: 'A',
-            insertarPila: ['B'],
+            simboloPila: 'B',
+            insertarPila: [''],
             al_estado: 1
         }
     ]
@@ -48,7 +48,6 @@ button.addEventListener("click", function() {
     let cadena = document.getElementById('txtCadena').value;
     let estadoActual = automata.estadoInicial;
     let error = false;
-    let x = 0;
     let pila = Array();
     pila.push('');
     console.log(cadena.length);
@@ -58,7 +57,10 @@ button.addEventListener("click", function() {
         let encuentraTransicion = false;
 
         automata.transiciones.forEach(transicion => {
-            if (transicion.estado == estadoActual && transicion.simbolo == simbolo && encuentraTransicion == false && transicion.simboloPila == pila[(pila.length - 1)]) {
+            //hacemos la comparacion logica para leer la pila
+            if (transicion.estado == estadoActual && transicion.simbolo ==
+                simbolo && encuentraTransicion == false &&
+                transicion.simboloPila == pila[(pila.length - 1)]) {
                 estadoActual = transicion.al_estado;
                 pila.pop();
                 for (let i = 0; i < (transicion.insertarPila.length); i++) {
@@ -79,6 +81,7 @@ button.addEventListener("click", function() {
     });
 
     if (!error) {
+        //comparamos para ver si cumple y mostrar mensaje
         if (automata.estadoFinal == estadoActual && pila.length == 0) {
             let options = {
                 buttons: ["Aceptar"],
@@ -91,7 +94,7 @@ button.addEventListener("click", function() {
             return;
         }
     } else {
-        dialog.showErrorBox('Error', 'Alguno de los caracteres que ingresó no pertenece al alfabeto Español');
+        dialog.showErrorBox('Error', 'Alguno de los caractéres que ingresó no pertenece a el alfabeto Español');
         return;
     }
 });
